@@ -1,1 +1,1 @@
-Python Urwidを使用したTUI(Text base user interface）アプリケーションのソースファイル
+Python Urwidを使用したTUI(Terminal base user interface）アプリケーションのソースファイル
