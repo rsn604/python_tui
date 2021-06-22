@@ -1,0 +1,1 @@
+Python Urwidを使用したTUI(Text base user interface）アプリケーションのソースファイル
