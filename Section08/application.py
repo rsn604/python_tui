@@ -8,19 +8,36 @@ from mywidget import my_palette
 
 class Application:
     main_loop = None
+
+    '''
+    @classmethod
+    def get_instance(cls, common=None):
+        if not hasattr(cls, "_instance"):
+            cls._instance = cls(common)
+        else:
+            cls._instance.common = common
+        return cls._instance
+    '''
     def exit(self, button=None):
         raise urwid.ExitMainLoop()
+
     def get_cols_rows(self):
         cols, rows = urwid.raw_display.Screen().get_cols_rows()
         return cols, rows-2
+
     def unhandled_keypress(self, k):
         return True
+
     def doformat(self):
         return urwid.widget
+
     def display(self):
         self.main_loop.widget = self.doformat()
+
     def start(self, next_class, common=None):
         next_class(common).run(self.main_loop)
+        #next_class.get_instance(common).run(self.main_loop)
+        
     def run(self, main_loop=None):
         if main_loop != None:
             self.main_loop = main_loop
