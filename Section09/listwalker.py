@@ -18,6 +18,7 @@ class ListWalker(urwid.ListWalker):
             if len(items) < from_rec + i:
                 self.is_last = True
                 break
+            #text = MyText(items[from_rec+i-1])
             text = MyText(items[from_rec+i-1][0])
             self.lines.append(urwid.AttrMap(text, None, 'listwalker'))
 
