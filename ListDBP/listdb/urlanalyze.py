@@ -14,7 +14,7 @@ class UrlAnalyze:
         self.port = parsed.port
 if __name__ == '__main__':
     #url = "mysql://root:test@192.168.0.28:3306/ListDB"
-    url = "mysql://rsdba1:rsdba1@localhost/ListDB"
+    url = "mysql://user01:pass01@localhost/ListDB"
     u = UrlAnalyze(url)
     print ("hostname=%s, port=%s, db_name=%s, username=%s, password=%s\n" % (u.hostname, u.port, u.db_name, u.username, u.password))
 
